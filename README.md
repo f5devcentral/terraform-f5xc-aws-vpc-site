@@ -56,5 +56,8 @@ No modules.
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_site_name"></a> [site\_name](#output\_site\_name) | n/a |
+| <a name="output_site_type"></a> [site\_type](#output\_site\_type) | n/a |
 <!-- END_TF_DOCS -->
