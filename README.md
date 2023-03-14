@@ -41,6 +41,7 @@ No modules.
 | <a name="input_instanceSuffix"></a> [instanceSuffix](#input\_instanceSuffix) | n/a | `string` | n/a | yes |
 | <a name="input_internalSubnets"></a> [internalSubnets](#input\_internalSubnets) | n/a | `map` | n/a | yes |
 | <a name="input_namespace"></a> [namespace](#input\_namespace) | Volterra application namespace | `string` | n/a | yes |
+| <a name="input_numWorkerNodesPerAz"></a> [numWorkerNodesPerAz](#input\_numWorkerNodesPerAz) | Number of XC worker nodes per Availability Zone | `number` | n/a | yes |
 | <a name="input_projectPrefix"></a> [projectPrefix](#input\_projectPrefix) | projectPrefix name for tagging | `string` | n/a | yes |
 | <a name="input_spoke2VpcId"></a> [spoke2VpcId](#input\_spoke2VpcId) | n/a | `any` | n/a | yes |
 | <a name="input_spokeVpcId"></a> [spokeVpcId](#input\_spokeVpcId) | n/a | `any` | n/a | yes |
