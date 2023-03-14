@@ -55,7 +55,7 @@ resource "volterra_aws_vpc_site" "example" {
 
     }
     // One of the arguments from this list "nodes_per_az total_nodes no_worker_nodes" must be set
-    nodes_per_az = "1"
+    nodes_per_az = var.numWorkerNodesPerAz > 0 ? var.numWorkerNodesPerAz : 0 
     #total_nodes = 6
     #no_worker_nodes = true
     lifecycle {

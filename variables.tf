@@ -80,3 +80,8 @@ variable "workloadSubnets" {
 variable "spokeVpcId" {}
 variable "spoke2VpcId" {}
 variable "ssh_public_key" {}
+
+variable "numWorkerNodesPerAz" {
+  description = "Number of XC worker nodes per Availability Zone"
+  type = number
+}
