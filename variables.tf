@@ -54,7 +54,8 @@ variable "workload_subnets" {
 }
 variable "ssh_public_key" {}
 
-variable "numWorkerNodesPerAz" {
+variable "num_worker_nodes_per_az" {
   description = "Number of XC worker nodes per Availability Zone"
   type = number
+  default = 0
 }

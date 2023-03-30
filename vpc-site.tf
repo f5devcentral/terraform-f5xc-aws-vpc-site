@@ -1,10 +1,10 @@
 resource "volterra_aws_vpc_site" "example" {
-    name       = format("%s-vpc-%s", var.projectPrefix, var.instanceSuffix)
+    name       = format("%s-vpc-%s", var.project_prefix, var.instance_suffix)
     namespace  = "system"
-    aws_region = var.awsRegion
+    aws_region = var.aws_region
     ssh_key    = var.ssh_public_key
     vpc {
-        vpc_id     = var.vpcId
+        vpc_id     = var.vpc_id
     }
     
     // One of the arguments from this list "default_blocked_services blocked_services" must be set
@@ -13,7 +13,7 @@ resource "volterra_aws_vpc_site" "example" {
     // One of the arguments from this list "aws_cred" must be set
 
     aws_cred {
-        name      = var.volterraCloudCredAWS
+        name      = var.volterra_cloud_cred_aws
         namespace = "system"
     }
     // One of the arguments from this list "direct_connect_disabled direct_connect_enabled" must be set
@@ -34,29 +34,29 @@ resource "volterra_aws_vpc_site" "example" {
         aws_certified_hw    = "aws-byol-voltmesh"
 
         az_nodes {
-            aws_az_name = var.awsAz1
+            aws_az_name = var.aws_az1
             local_subnet {
-                existing_subnet_id = var.internalSubnets["az1"].id
+                existing_subnet_id = var.internal_subnets["az1"].id
             }
         }
 
         az_nodes {
-            aws_az_name = var.awsAz2
+            aws_az_name = var.aws_az2
             local_subnet {
-                existing_subnet_id = var.internalSubnets["az2"].id
+                existing_subnet_id = var.internal_subnets["az2"].id
             } 
         }
 
         az_nodes {
-            aws_az_name = var.awsAz3
+            aws_az_name = var.aws_az3
             local_subnet {
-                existing_subnet_id = var.internalSubnets["az3"].id
+                existing_subnet_id = var.internal_subnets["az3"].id
             }
         }
 
     }
     // One of the arguments from this list "nodes_per_az total_nodes no_worker_nodes" must be set
-    nodes_per_az = var.numWorkerNodesPerAz > 0 ? var.numWorkerNodesPerAz : 0 
+    nodes_per_az = var.num_worker_nodes_per_az 
     #total_nodes = 6
     #no_worker_nodes = true
     lifecycle {
@@ -71,7 +71,7 @@ resource "volterra_cloud_site_labels" "labels" {
   name             = volterra_aws_vpc_site.example.name
   site_type        = "aws_vpc_site"
   # need at least one label, otherwise site_type is ignored
-  labels           = { "site-group" = var.projectPrefix }
+  labels           = { "site-group" = var.project_prefix }
   #ignore_on_delete = var.f5xc_cloud_site_labels_ignore_on_delete
 }
 
