@@ -1,13 +1,8 @@
-variable "buildSuffix" {
-  type        = string
-  default     = null
-  description = "random build suffix for resources"
-}
-variable "projectPrefix" {
+variable "project_prefix" {
   type        = string
   description = "projectPrefix name for tagging"
 }
-variable "instanceSuffix" {
+variable "instance_suffix" {
   type = string
 }
 
@@ -22,61 +17,45 @@ variable "namespace" {
 }
 
 
-variable "volterraCloudCredAWS" {
+variable "volterra_cloud_cred_aws" {
   description = "Name of the volterra aws credentials"
   type        = string
 }
 
-variable "volterraCloudCredAzure" {
-  description = "Name of the volterra aws credentials"
-  type        = string
-}
-
-variable "awsRegion" {
+variable "aws_region" {
   description = "aws region"
   type        = string
 }
 
-variable "awsAz1" {
+variable "aws_az1" {
   description = "Availability zone, will dynamically choose one if left empty"
   type        = string
   default     = null
 }
-variable "awsAz2" {
+variable "aws_az2" {
   description = "Availability zone, will dynamically choose one if left empty"
   type        = string
   default     = null
 }
-variable "awsAz3" {
+variable "aws_az3" {
   description = "Availability zone, will dynamically choose one if left empty"
   type        = string
   default     = null
 }
-
-variable "volterraP12" {
-  description = "Location of volterra p12 file"
-  type        = string
-  default     = null
-}
-variable "volterraUrl" {
-  description = "url of volterra api"
-  type        = string
-  default     = null
-}
-variable "volterraTenant" {
-  description = "Tenant of Volterra"
-  type        = string
-}
-variable "vpcId" {}
-variable "externalSubnets" {
+variable "vpc_id" {}
+variable "external_subnets" {
   type = map
 }
-variable "internalSubnets" {
+variable "internal_subnets" {
   type = map
 }
-variable "workloadSubnets" {
+variable "workload_subnets" {
   type = map
 }
-variable "spokeVpcId" {}
-variable "spoke2VpcId" {}
 variable "ssh_public_key" {}
+
+variable "num_worker_nodes_per_az" {
+  description = "Number of XC worker nodes per Availability Zone"
+  type = number
+  default = 0
+}
