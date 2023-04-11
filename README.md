@@ -32,28 +32,21 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_auto_trust_localip"></a> [auto\_trust\_localip](#input\_auto\_trust\_localip) | if true, query ifconfig.io for public ip of terraform host. | `bool` | `false` | no |
-| <a name="input_awsAz1"></a> [awsAz1](#input\_awsAz1) | Availability zone, will dynamically choose one if left empty | `string` | `null` | no |
-| <a name="input_awsAz2"></a> [awsAz2](#input\_awsAz2) | Availability zone, will dynamically choose one if left empty | `string` | `null` | no |
-| <a name="input_awsAz3"></a> [awsAz3](#input\_awsAz3) | Availability zone, will dynamically choose one if left empty | `string` | `null` | no |
-| <a name="input_awsRegion"></a> [awsRegion](#input\_awsRegion) | aws region | `string` | n/a | yes |
-| <a name="input_buildSuffix"></a> [buildSuffix](#input\_buildSuffix) | random build suffix for resources | `string` | `null` | no |
-| <a name="input_externalSubnets"></a> [externalSubnets](#input\_externalSubnets) | n/a | `map` | n/a | yes |
-| <a name="input_instanceSuffix"></a> [instanceSuffix](#input\_instanceSuffix) | n/a | `string` | n/a | yes |
-| <a name="input_internalSubnets"></a> [internalSubnets](#input\_internalSubnets) | n/a | `map` | n/a | yes |
+| <a name="input_aws_az1"></a> [aws\_az1](#input\_aws\_az1) | Availability zone, will dynamically choose one if left empty | `string` | `null` | no |
+| <a name="input_aws_az2"></a> [aws\_az2](#input\_aws\_az2) | Availability zone, will dynamically choose one if left empty | `string` | `null` | no |
+| <a name="input_aws_az3"></a> [aws\_az3](#input\_aws\_az3) | Availability zone, will dynamically choose one if left empty | `string` | `null` | no |
+| <a name="input_aws_region"></a> [aws\_region](#input\_aws\_region) | aws region | `string` | n/a | yes |
+| <a name="input_external_subnets"></a> [external\_subnets](#input\_external\_subnets) | n/a | `map` | n/a | yes |
+| <a name="input_instance_suffix"></a> [instance\_suffix](#input\_instance\_suffix) | n/a | `string` | n/a | yes |
+| <a name="input_internal_subnets"></a> [internal\_subnets](#input\_internal\_subnets) | n/a | `map` | n/a | yes |
 | <a name="input_namespace"></a> [namespace](#input\_namespace) | Volterra application namespace | `string` | n/a | yes |
-| <a name="input_numWorkerNodesPerAz"></a> [numWorkerNodesPerAz](#input\_numWorkerNodesPerAz) | Number of XC worker nodes per Availability Zone | `number` | n/a | yes |
-| <a name="input_projectPrefix"></a> [projectPrefix](#input\_projectPrefix) | projectPrefix name for tagging | `string` | n/a | yes |
-| <a name="input_spoke2VpcId"></a> [spoke2VpcId](#input\_spoke2VpcId) | n/a | `any` | n/a | yes |
-| <a name="input_spokeVpcId"></a> [spokeVpcId](#input\_spokeVpcId) | n/a | `any` | n/a | yes |
+| <a name="input_num_worker_nodes_per_az"></a> [num\_worker\_nodes\_per\_az](#input\_num\_worker\_nodes\_per\_az) | Number of XC worker nodes per Availability Zone | `number` | `0` | no |
+| <a name="input_project_prefix"></a> [project\_prefix](#input\_project\_prefix) | projectPrefix name for tagging | `string` | n/a | yes |
 | <a name="input_ssh_public_key"></a> [ssh\_public\_key](#input\_ssh\_public\_key) | n/a | `any` | n/a | yes |
 | <a name="input_trusted_ip"></a> [trusted\_ip](#input\_trusted\_ip) | IP to allow external access | `string` | n/a | yes |
-| <a name="input_volterraCloudCredAWS"></a> [volterraCloudCredAWS](#input\_volterraCloudCredAWS) | Name of the volterra aws credentials | `string` | n/a | yes |
-| <a name="input_volterraCloudCredAzure"></a> [volterraCloudCredAzure](#input\_volterraCloudCredAzure) | Name of the volterra aws credentials | `string` | n/a | yes |
-| <a name="input_volterraP12"></a> [volterraP12](#input\_volterraP12) | Location of volterra p12 file | `string` | `null` | no |
-| <a name="input_volterraTenant"></a> [volterraTenant](#input\_volterraTenant) | Tenant of Volterra | `string` | n/a | yes |
-| <a name="input_volterraUrl"></a> [volterraUrl](#input\_volterraUrl) | url of volterra api | `string` | `null` | no |
-| <a name="input_vpcId"></a> [vpcId](#input\_vpcId) | n/a | `any` | n/a | yes |
-| <a name="input_workloadSubnets"></a> [workloadSubnets](#input\_workloadSubnets) | n/a | `map` | n/a | yes |
+| <a name="input_volterra_cloud_cred_aws"></a> [volterra\_cloud\_cred\_aws](#input\_volterra\_cloud\_cred\_aws) | Name of the volterra aws credentials | `string` | n/a | yes |
+| <a name="input_vpc_id"></a> [vpc\_id](#input\_vpc\_id) | n/a | `any` | n/a | yes |
+| <a name="input_workload_subnets"></a> [workload\_subnets](#input\_workload\_subnets) | n/a | `map` | n/a | yes |
 
 ## Outputs
 
